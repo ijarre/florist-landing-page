@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  imageUrl: string;
+  title: string;
+  description: string;
+  price: string;
+}
+
+const { description, imageUrl, price, title } = Astro.props;
+---
+
+<div class="w-[230px] overflow-clip rounded-lg bg-[#E5E5E5] shadow-lg">
+  <Image
+    src={imageUrl}
+    alt={"flower bouquet"}
+    width={230}
+    height={200}
+    class="object-cover object-bottom"
+  />
+  <div class="px-3 py-2">
+    <p class="text-md font-medium tracking-wide">{title}</p>
+    <p class="mt-1 h-28 text-justify font-paragraph text-sm">{description}</p>
+    <div class="flex justify-between">
+      <button
+        class="rounded-lg bg-main-pink px-2 py-1 font-[ClashDisplay-Medium] text-xs tracking-wide shadow-md"
+      >
+        I Want This
+      </button>
+      <span class="font-medium tracking-wider">
+        {price}
+      </span>
+    </div>
+  </div>
+</div>
