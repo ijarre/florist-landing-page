@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import heroImage from "../assets/hero.png";
 import { PRODUCT_LIST } from "../__mock/productList";
 import ProductCard from "../components/ProductCard.astro";
+import flowerTotem from "../assets/215.svg";
 ---
 
 <Layout title="Monet Magic Garden - Bride's bouquet">
@@ -59,7 +60,7 @@ import ProductCard from "../components/ProductCard.astro";
 
     <!-- START BESPOKE SECTION -->
     <section
-      class="bg-bespoke shadow-overlay-image grid h-96 min-h-[90vh] w-full place-items-center px-20 text-main-white"
+      class="grid h-96 min-h-[90vh] w-full place-items-center bg-bespoke px-20 text-main-white shadow-overlay-image"
     >
       <div class="flex flex-col items-center justify-center">
         <h3 class="text-center text-5xl font-semibold">
@@ -72,7 +73,7 @@ import ProductCard from "../components/ProductCard.astro";
           your individuality.
         </p>
         <button
-          class="shadonw-lg text-main-black mt-5 rounded-lg bg-main-pink px-3 py-2 font-[ClashDisplay-Medium] tracking-wide"
+          class="shadonw-lg mt-5 rounded-lg bg-main-pink px-3 py-2 font-[ClashDisplay-Medium] tracking-wide text-main-black"
           >Tell Us What You Have In Mind</button
         >
       </div>
@@ -80,10 +81,31 @@ import ProductCard from "../components/ProductCard.astro";
 
     <!-- START ROOT SECTION -->
 
-    <section class="px-24 py-12">
-      <h3 class="text-center text-5xl font-semibold">
-        Roots of Artistry:<br /> The Story Behind Monet Magic Garden
-      </h3>
+    <section class="relative bg-main-white px-24 py-12 text-main-black">
+      <div class="flex gap-4">
+        <Image src={flowerTotem} alt={""} height={100} />
+        <h3 class="text-5xl font-semibold tracking-wide">
+          Roots of Artistry:<br /> The Story Behind Monet Magic Garden
+        </h3>
+      </div>
+      <p class="mt-5 font-paragraph text-lg">
+        Welcome to Monet Magic Garden, where every petal tells a story of
+        passion and craftsmanship. Our journey began with a simple yet profound
+        belief—that the language of flowers has the power to transform ordinary
+        moments into extraordinary memories. <br />
+        <br />
+        Founded in the heart of Jakarta, Indonesia, Monet Magic Garden is not just
+        a florist; it's an embodiment of <b>artistry and dedication </b>. Our
+        skilled team of floral artisans, led by [Founder's Name], brings
+        together a wealth of experience and a shared love for creating timeless
+        floral arrangements. At Monet Magic Garden, we draw inspiration from the
+        beauty of nature and the artistry of the great masters. Each bouquet is
+        a canvas, carefully composed to evoke emotions, tell stories, and
+        celebrate the richness of life. <br />
+        <br />
+        Join us on this floral journey, where every creation is a masterpiece, and
+        every delivery is a moment of joy.
+      </p>
     </section>
   </main>
 </Layout>
